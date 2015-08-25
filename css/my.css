@@ -1,0 +1,16 @@
+img.portrait {
+    width: 42%;
+    float: right;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.postthumb {
+    margin-right: 30px;
+    float: left;
+    width: 200px;
+}
+
+/*.navbar-custom.is-fixed .nav li a {
+    color: #404040;
+}*/
