@@ -41,6 +41,9 @@ angular.module('app', ["firebase"])
 
 			$scope.submitted = true;
 
+			setTimeout(function(){
+				location.hash = 'thanks';
+			});
 		};
 
 
@@ -92,7 +95,6 @@ function supportQuote(name, email) {
 		url: 'http://api.theysaidso.com/qod.json',
 		dataType: 'json',
 		success: function (data) {
-			console.log(data);
 			$('#name')[0].value = name;
 			$('#email')[0].value = email;
 			$('#message')[0].value = data.contents.quotes[0].quote;
