@@ -20,8 +20,8 @@ angular.module('app', ["firebase"])
 			} else if (name.match(/ /g) && name.match(/ /g).length > 3) {
 				$scope.warning("Please input just your first and last name.");
 				return false;
-			}else if (!email.match(/^([A-Z|a-z|0-9](\.|_){0,1})+[A-Z|a-z|0-9]\@([A-Z|a-z|0-9])+((\.){0,1}[A-Z|a-z|0-9]){2}\.[a-z]{2,3}$/gm)) {
-                $scope.warning("Please input a valid email address.");
+			} else if (!email.match(/^([A-Z|a-z|0-9](\.|_){0,1})+[A-Z|a-z|0-9]\@([A-Z|a-z|0-9])+((\.){0,1}[A-Z|a-z|0-9]){2}\.[a-z]{2,3}$/gm)) {
+				$scope.warning("Please input a valid email address.");
 				return false;
 			}
 
@@ -33,7 +33,7 @@ angular.module('app', ["firebase"])
 				timestamp: new Date().toString()
 			});
 
-            $scope.name = $('#name').val();
+			$scope.name = $('#name').val();
 
 			$('#name').val('');
 			$('#email').val('');
@@ -58,3 +58,46 @@ angular.module('app', ["firebase"])
 		}
 
 	});
+
+function generateRandomUsers(num) {
+
+	var url = 'https://randomuser.me/api';
+
+	if (num) {
+		url += '?results=' + num;
+	}
+
+	$.ajax({
+		url: url,
+		dataType: 'json',
+		success: function (data) {
+			for (var i = 0; i < data.results.length; i++) {
+				var user = data.results[i].user;
+
+				if (String(i).charAt(1) === '0') {
+					supportQuote(user.name.first + ' ' + user.name.last, user.email);
+				}else {
+					$('#name')[0].value = user.name.first + ' ' + user.name.last;
+					$('#email')[0].value = user.email;
+
+					$('#pledge').click();
+				}
+			}
+		}
+	});
+};
+
+function supportQuote(name, email) {
+	$.ajax({
+		url: 'http://api.theysaidso.com/qod.json',
+		dataType: 'json',
+		success: function (data) {
+			console.log(data);
+			$('#name')[0].value = name;
+			$('#email')[0].value = email;
+			$('#message')[0].value = data.contents.quotes[0].quote;
+
+			$('#pledge').click();
+		}
+	})
+}
