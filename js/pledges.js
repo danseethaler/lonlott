@@ -1,10 +1,27 @@
 angular.module('app', ["firebase"])
-	.controller('posts', function ($scope, $firebaseObject) {
+	.controller('posts', function ($scope, $firebaseObject, $firebase) {
 
 		var ref = new Firebase("https://lonlott.firebaseio.com/pledges");
 
 		// download the data into a local object
 		$scope.data = $firebaseObject(ref);
+
+		$scope.data.$loaded().then(function () {
+
+			console.log($scope.data);
+
+			for (var pledge in $scope.data) {
+				if ($scope.data.hasOwnProperty(pledge) && $scope.data[pledge] && $scope.data[pledge].timestamp) {
+					if (new Date($scope.data[pledge].timestamp).valueOf() < 1440636690000) {
+
+						console.log($scope.data[pledge].email, 'deleted');
+
+						var samplePledge = new Firebase('https://lonlott.firebaseio.com/pledges/' + pledge);
+						samplePledge.remove();
+					}
+				}
+			}
+		})
 
 		$scope.sendSupport = function () {
 
@@ -41,7 +58,7 @@ angular.module('app', ["firebase"])
 
 			$scope.submitted = true;
 
-			setTimeout(function(){
+			setTimeout(function () {
 				location.hash = 'thanks';
 			});
 		};
@@ -79,7 +96,7 @@ function generateRandomUsers(num) {
 
 				if (String(i).charAt(1) === '0') {
 					supportQuote(user.name.first + ' ' + user.name.last, user.email);
-				}else {
+				} else {
 					$('#name')[0].value = user.name.first + ' ' + user.name.last;
 					$('#email')[0].value = user.email;
 
@@ -89,6 +106,13 @@ function generateRandomUsers(num) {
 		}
 	});
 };
+
+function removeBadData() {
+	var ref = new Firebase("https://lonlott.firebaseio.com/pledges");
+
+	data = $firebaseObject(ref);
+
+}
 
 function supportQuote(name, email) {
 	$.ajax({

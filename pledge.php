@@ -34,6 +34,18 @@
 </head>
 
 <body ng-app="app" ng-controller="posts">
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <? error_reporting(0) ?>
 
         <?php include 'includes/navigation.php';?>
@@ -91,6 +103,22 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" ng-hide="submitted">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <p>Or pledge your support on social media.
+                            <!-- https://developers.facebook.com/docs/plugins/share-button -->
+                            <!-- https://dev.twitter.com/web/intents#tweet-intent -->
+                            <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+                            <a style="text-decoration: none;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnew.lonlott.com&text=I support Lon Lott for Alpine City Council">
+                                <img style="width: 40px; cursor: pointer;" src="/img/twitter.png" alt="" />
+                            </a>
+                            <span style="vertical-align: top;" class="fb-share-button" data-href="http://new.lonlott.com/pledge.php" data-text="cool" data-layout="button"></span>
+                        </p>
                     </div>
                 </div>
             </div>
