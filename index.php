@@ -68,7 +68,7 @@
                     </a>
                     <p class="post-meta">Posted on August 10, 2015</p>
                 </div>
-                <hr>
+                <!-- <hr>
                 <div class="post-preview">
                     <a href="post.php">
                         <h2 class="post-title">
@@ -101,7 +101,7 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Lon Lott 4 Alpine</a> on July 8, 2014</p>
                 </div>
-                <hr>
+                <hr> -->
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">

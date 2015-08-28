@@ -114,10 +114,10 @@
                             <!-- https://developers.facebook.com/docs/plugins/share-button -->
                             <!-- https://dev.twitter.com/web/intents#tweet-intent -->
                             <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
-                            <a style="text-decoration: none;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnew.lonlott.com&text=I support Lon Lott for Alpine City Council">
+                            <a style="text-decoration: none;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.lonlott.com&text=I support Lon Lott for Alpine City Council">
                                 <img style="width: 40px; cursor: pointer;" src="/img/twitter.png" alt="" />
                             </a>
-                            <span style="vertical-align: top;" class="fb-share-button" data-href="http://new.lonlott.com/pledge.php" data-text="cool" data-layout="button"></span>
+                            <span style="vertical-align: top;" class="fb-share-button" data-href="http://www.lonlott.com/pledge.php" data-text="cool" data-layout="button"></span>
                         </p>
                     </div>
                 </div>

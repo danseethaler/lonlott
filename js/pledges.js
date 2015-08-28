@@ -8,19 +8,19 @@ angular.module('app', ["firebase"])
 
 		$scope.data.$loaded().then(function () {
 
-			console.log($scope.data);
-
-			for (var pledge in $scope.data) {
-				if ($scope.data.hasOwnProperty(pledge) && $scope.data[pledge] && $scope.data[pledge].timestamp) {
-					if (new Date($scope.data[pledge].timestamp).valueOf() < 1440636690000) {
-
-						console.log($scope.data[pledge].email, 'deleted');
-
-						var samplePledge = new Firebase('https://lonlott.firebaseio.com/pledges/' + pledge);
-						samplePledge.remove();
-					}
-				}
-			}
+			// console.log($scope.data);
+			//
+			// for (var pledge in $scope.data) {
+			// 	if ($scope.data.hasOwnProperty(pledge) && $scope.data[pledge] && $scope.data[pledge].timestamp) {
+			// 		if (new Date($scope.data[pledge].timestamp).valueOf() < 1440636690000) {
+			//
+			// 			console.log($scope.data[pledge].email, 'deleted');
+			//
+			// 			var samplePledge = new Firebase('https://lonlott.firebaseio.com/pledges/' + pledge);
+			// 			samplePledge.remove();
+			// 		}
+			// 	}
+			// }
 		})
 
 		$scope.sendSupport = function () {
