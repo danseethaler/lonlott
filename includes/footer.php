@@ -34,3 +34,20 @@
         </div>
     </div>
 </footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js"></script>
+
+<!-- Mixpanel Script -->
+<script src="/js/mixpanel.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    var pageName = <?php echo json_encode(ucfirst(basename($_SERVER["SCRIPT_FILENAME"], ".php"))) ?>;
+    mixpanel.track(pageName + " visit");
+</script>

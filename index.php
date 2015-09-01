@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Lon Lott 4 Alpine</title>
+    <title>Lon Lott 4 Alpine - <?php echo ucfirst(basename($_SERVER["SCRIPT_FILENAME"], ".php")) ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -114,16 +114,7 @@
 
     <hr>
 
-    <?php include '/includes/footer.php';?>
-
-    <!-- jQuery -->
-    <script src="/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/js/clean-blog.min.js"></script>
+    <?php include 'includes/footer.php';?>
 
 </body>
 

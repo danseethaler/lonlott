@@ -25,6 +25,8 @@ angular.module('app', ["firebase"])
 
 		$scope.sendSupport = function () {
 
+			mixpanel.track("Support Received");
+
 			// ref.remove();
 
 			var name = document.forms["showSupport"]["name"].value,
