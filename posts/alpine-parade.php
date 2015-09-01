@@ -37,7 +37,7 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url('/img/alpine-parade/float.jpg')">
+        <header class="intro-header" style="background-color: #A2C070">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -56,6 +56,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <p>
+                            A big thank you to my friends who helped build this great float for the alpine days parade. Thanks to my wonderful family for the support they give me as i move through this campaign effort.
+                        </p>
                         <img class="img-responsive" src="/img/alpine-parade/cousins.jpg" alt=""><br>
                         <img class="img-responsive" src="/img/alpine-parade/cousins-1.jpg" alt=""><br>
                         <img class="img-responsive" src="/img/alpine-parade/jess-spence.jpg" alt=""><br>
