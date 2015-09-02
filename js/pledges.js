@@ -62,7 +62,9 @@ angular.module('app', ["firebase"])
 
 			setTimeout(function () {
 				location.hash = 'thanks';
-			});
+				$('nav')[0].className = 'navbar navbar-default navbar-custom navbar-fixed-top is-fixed';
+			},500);
+
 		};
 
 

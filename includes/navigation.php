@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Lon Lott 4 Alpine</a>
+            <a class="navbar-brand" href="http://www.lonlott.com/">Lon Lott 4 Alpine</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

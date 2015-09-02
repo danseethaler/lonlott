@@ -37,13 +37,13 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-color: #A2C070">
+        <header class="intro-header" style="background-color: #5D7AA2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="post-heading">
                             <h1>Alpine City Parade</h1>
-                            <h2 class="subheading">The opportunity to meet for the Parade is a tradition our family has enjoyed for years.</h2>
+                            <h2 class="subheading">A big thank you to my friends who helped build this great float for the alpine days parade. Thanks to my wonderful family for the support they give me as i move through this campaign effort.</h2>
                             <span class="meta">Posted on August 10, 2015</span>
                         </div>
                     </div>
@@ -56,9 +56,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <p>
-                            A big thank you to my friends who helped build this great float for the alpine days parade. Thanks to my wonderful family for the support they give me as i move through this campaign effort.
-                        </p>
                         <img class="img-responsive" src="/img/alpine-parade/cousins.jpg" alt=""><br>
                         <img class="img-responsive" src="/img/alpine-parade/cousins-1.jpg" alt=""><br>
                         <img class="img-responsive" src="/img/alpine-parade/jess-spence.jpg" alt=""><br>
