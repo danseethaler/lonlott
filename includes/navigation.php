@@ -21,10 +21,10 @@
                     <a href="/index.php">Home</a>
                 </li>
                 <li>
-                    <a href="/about.php">About</a>
+                    <a href="/about.php">About Lon</a>
                 </li>
                 <li>
-                    <a href="/pledge.php">Pledge</a>
+                    <a href="/pledge.php">Show Your Support</a>
                 </li>
                 <li>
                     <a href="contact.php">Contact</a>

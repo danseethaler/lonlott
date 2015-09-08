@@ -57,7 +57,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                             <div class="site-heading">
-                                <h1>Pledge your support.</h1>
+                                <h1>Show your support.</h1>
                                 <h2 class="subheading">Add your name below to show you support Lon Lott.</h2>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
             <div class="container" ng-hide="submitted">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <p>Pledge your support below.</p>
+                        <p>Show your support below.</p>
                         <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
                         <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                         <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
@@ -98,8 +98,8 @@
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-default" id="pledge" ng-click="sendSupport()">Pledge</button>
-                                    <span class="caption text-muted" style="display: inline-block;">By clicking "pledge" you agree to have your name and endorsement posted on lonlott.com.</span>
+                                    <button type="submit" class="btn btn-default" id="pledge" ng-click="sendSupport()">Support</button>
+                                    <span class="caption text-muted" style="display: inline-block;">By clicking "support" you agree to have your name and endorsement posted on lonlott.com.</span>
                                 </div>
                             </div>
                         </form>
@@ -110,7 +110,7 @@
             <div class="container" ng-hide="submitted">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <p>Or pledge your support on social media.
+                        <p>Or show your support on social media.
                             <!-- https://developers.facebook.com/docs/plugins/share-button -->
                             <!-- https://dev.twitter.com/web/intents#tweet-intent -->
                             <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
@@ -134,7 +134,7 @@
                             <hr ng-show="submitted">
                             <h1 style="text-align: center;">Supporters</h1>
                             <div class="supporters">
-                                <div ng-repeat="pledge in data" ng-cloak>
+                                <div ng-repeat="pledge in pledges | orderBy:'name'" ng-cloak>
                                     <h4 style="text-transform: capitalize">{{pledge.name}}</h4>
                                     <blockquote ng-if="pledge.comment">{{pledge.comment}}</blockquote>
                                 </div>

@@ -8,6 +8,14 @@ angular.module('app', ["firebase"])
 
 		$scope.data.$loaded().then(function () {
 
+			$scope.pledges = [];
+
+			for (var pledge in $scope.data) {
+				if ($scope.data.hasOwnProperty(pledge) && pledge.substr(0,1) === '-') {
+					$scope.pledges.push($scope.data[pledge]);
+				}
+			}
+
 			// console.log($scope.data);
 			//
 			// for (var pledge in $scope.data) {
