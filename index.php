@@ -57,6 +57,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
+                    <a href="posts/meet-the-candidates.php">
+                        <img src="/img/lon-zoom-profile.png" class="img-responsive postthumb" alt="" />
+                        <h2 class="post-title">
+                            Meet the Candidates
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Here is me in under two minutes. If that's possible...
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted on September 25, 2015</p>
+                </div>
+                <div class="post-preview">
                     <a href="posts/alpine-parade.php">
                         <img src="/img/alpine-parade/float.jpg" class="img-responsive postthumb" alt="" />
                         <h2 class="post-title">
@@ -103,11 +115,11 @@
                 </div>
                 <hr> -->
                 <!-- Pager -->
-                <ul class="pager">
+                <!-- <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
